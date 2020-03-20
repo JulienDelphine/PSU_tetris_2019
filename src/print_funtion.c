@@ -21,7 +21,7 @@ void print_usage(void)
     my_printf(" -d --key-drop={K}    DROP the tetrimino using ");
     my_printf("the K key (def: down arrow)\n");
     my_printf(" -q --key-quit={K}    QUIT the game ");
-    my_printf("using the K key (def: ‘q’ key)\n");
+    my_printf("using the K key (def: 'q' key)\n");
     my_printf(" -p --key-pause={K}   PAUSE/RESTART the game using ");
     my_printf("the K key (def: space bar)\n");
     my_printf(" --map-size={row,col} Set the numbers of rows and ");
