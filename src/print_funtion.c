@@ -7,9 +7,9 @@
 
 #include "tetris.h"
 
-void print_usage(void)
+void print_usage(char *av)
 {
-    my_printf("Usage:  ./tetris [options]\nOptions:\n");
+    my_printf("Usage:  %s [options]\nOptions:\n", av);
     my_printf(" --help               Display this help\n -L");
     my_printf(" --level={num}     Start Tetris at the level num (def: 1)\n");
     my_printf(" -l --key-left={K}    Move the tetrimino ");
@@ -28,4 +28,9 @@ void print_usage(void)
     my_printf("columns of the map (def: 20,10)\n");
     my_printf(" -w --without-next    Hide next tetrimino (def: false)\n");
     my_printf(" -D --debug           Debug mode (def: false)\n");
+}
+
+void print_debug(void)
+{
+    
 }

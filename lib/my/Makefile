@@ -24,7 +24,8 @@ SRC	=	my_printf.c	\
 		my_strlen_special.c	\
 		my_str_isnumpos.c	\
 		my_str_isnumpos_special.c	\
-		my_strcmp.c
+		my_strcmp.c	\
+		my_strstr.c
 
 OBJ	=	$(SRC:.c=.o)
 

@@ -6,13 +6,16 @@
 ##
 
 SRC	=	src/main_tetris.c	\
-		src/print_funtion.c
+		src/print_funtion.c	\
+		src/handle_errors.c	\
+		src/debug.c			\
+		src/handle_errors_long_flag.c
 
 NAME	=	tetris
 
 CFLAGS	=	-lcurses -o
 
-EFLAGS	=	-Wall -Wextra -I./include/
+EFLAGS	=	-g -Wall -Wextra -I./include/
 
 LIB		=	-L lib/my/ -lmy
 
