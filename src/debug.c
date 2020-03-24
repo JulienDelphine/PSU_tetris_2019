@@ -7,7 +7,7 @@
 
 #include "tetris.h"
 
-void start_debug(int ac, char **av)
+void start_debug(int ac, char **av, key_s *key)
 {
-    
+    print_debug(key);
 }

@@ -41,6 +41,6 @@ int my_strlen_special(char *str);
 int my_str_isnumpos(char const *str);
 int my_str_isnumpos_special(char const *str);
 int my_strcmp(char *check, char *str);
-int my_strstr(char *check, char *str);
+int my_strstr(char *check, char *str, int size);
 
 #endif /* LIB_ */

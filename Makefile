@@ -9,7 +9,8 @@ SRC	=	src/main_tetris.c	\
 		src/print_funtion.c	\
 		src/handle_errors.c	\
 		src/debug.c			\
-		src/handle_errors_long_flag.c
+		src/handle_errors_long_flag.c	\
+		src/key.c
 
 NAME	=	tetris
 
