@@ -9,5 +9,6 @@
 
 void start_debug(int ac, char **av, game_t *game)
 {
+    change_value(ac, av, game);
     print_debug(game);
 }

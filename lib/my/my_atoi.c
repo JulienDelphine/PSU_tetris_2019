@@ -7,14 +7,12 @@
 
 int my_atoi(char const *str)
 {
-    int i;
-    int n;
+    int i = 0;
+    int n = 0;
 
-    i = 0;
-    n = 0;
-    if (str[0] == '-' && str[1] != '\n')
+    if (str[0] == '-' && str[1] != '\0')
         i++;
-    while (str[i] != '\n')
+    while (str[i] != '\0')
     {
         if ((str[i] < '0' || str[i] > '9'))
             return (0);

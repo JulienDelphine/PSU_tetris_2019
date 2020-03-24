@@ -53,7 +53,8 @@ int check_long_flag(char *arg)
 
 int check_errors_flag(char *arg, char *check)
 {
-    if (my_strcmp("-D\0", arg) == 0 || my_strcmp("--debug\0", arg) == 0)
+    if (my_strcmp("-D\0", arg) == 0 || my_strcmp("--debug\0", arg) == 0
+    || my_strcmp("-w\0", arg) == 0)
         return (0);
     if (my_strcmp("-L\0", arg) == 0) {
         check_lvl_errors(check);

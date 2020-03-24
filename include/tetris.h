@@ -34,5 +34,7 @@ char *key_quit(key_s *key);
 char *key_drop(key_s *key);
 char *key_pause(key_s *key);
 char *verif_next(game_t *game);
+void change_value(int ac, char **av, game_t *game);
+void change_key_right(char *check, game_t *game);
 
 #endif /* TETRIS */
