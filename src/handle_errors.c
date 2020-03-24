@@ -51,7 +51,7 @@ int check_long_flag(char *arg)
     return (1);
 }
 
-int check_errors_flag(char *arg, char *check, key_s *key)
+int check_errors_flag(char *arg, char *check)
 {
     if (my_strcmp("-D\0", arg) == 0 || my_strcmp("--debug\0", arg) == 0)
         return (0);
@@ -73,10 +73,10 @@ int check_errors_flag(char *arg, char *check, key_s *key)
     exit (84);
 }
 
-int handle_errors(int ac, char **av, key_s *key)
+int handle_errors(int ac, char **av)
 {
     for (int i = 1; i != ac; i++) {
-        if (check_errors_flag(av[i], av[i + 1], key) == 1)
+        if (check_errors_flag(av[i], av[i + 1]) == 1)
             i++;
     }
     return (0);

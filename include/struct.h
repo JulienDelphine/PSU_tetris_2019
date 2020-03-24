@@ -7,7 +7,6 @@
 
 typedef struct key_s
 {
-    char **key_tab;
     int key_turn;
     int key_left;
     int key_right;
@@ -21,4 +20,7 @@ typedef struct game_t
     char **game;
     int next;
     int level;
+    int size_x;
+    int size_y;
+    key_s key;
 } game_t;

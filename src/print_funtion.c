@@ -30,10 +30,16 @@ void print_usage(char *av)
     my_printf(" -D --debug           Debug mode (def: false)\n");
 }
 
-void print_debug(key_s *key)
+void print_debug(game_t *game)
 {
-    printf("*** DEBUG MODE ***\nKey Left :  %s\n", key_left(key));
-    printf("Key Right :  %s\nKey Turn :  %s\n", key_right(key), key_turn(key));
-    printf("Key Drop :  %s\nKey Quit :  %s\n", key_drop(key), key_quit(key));
-    //printf("Key Pause :  %s\nNext :  \n", key_pause(key));
+    my_printf("*** DEBUG MODE ***\nKey Left :  %s\n", key_left(&game->key));
+    my_printf("Key Right :  %s\n", key_right(&game->key));
+    my_printf("Key Turn :  %s\n", key_turn(&game->key));
+    my_printf("Key Drop :  %s\n", key_drop(&game->key));
+    my_printf("Key Quit :  %s\n", key_quit(&game->key));
+    my_printf("Key Pause :  %s\n", key_pause(&game->key));
+    my_printf("Next :  %s\n", verif_next(game));
+    my_printf("Level :  %d\n", game->level);
+    my_printf("Size :  %d*%d\n", game->size_y, game->size_x);
+    my_printf("Tetriminos :  \n");
 }
