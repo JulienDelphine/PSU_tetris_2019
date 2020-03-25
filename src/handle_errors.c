@@ -42,12 +42,14 @@ int check_long_flag(char *arg)
     }
     if (my_strstr("--key-left=\0", arg, 11) == 0 || 
     my_strstr("--key-right=\0", arg, 12) == 0|| my_strstr("--key_turn=\0", 
-    arg, 11) == 0 || my_strstr("--key-drop=\0", arg, 11) || 
+    arg, 11) == 0 || my_strstr("--key-drop=\0", arg, 11) == 0 || 
     my_strstr("--key_quit=\0", arg, 11) == 0 || my_strstr("--key-pause=\0",
     arg, 12) == 0) {
         check_error_long_key(arg);
         return (0);
     }
+    if (my_strstr("--map-size=\0", arg, 11) == 0)
+        return (0);
     return (1);
 }
 
