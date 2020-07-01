@@ -13,7 +13,13 @@ SRC	=	src/main_tetris.c	\
 		src/key_move.c	\
 		src/key_menu.c	\
 		src/help_print_debug.c	\
-		src/change_value.c
+		src/change_value.c	\
+		src/check_file_content.c	\
+		src/check_file.c	\
+		src/check_struct_size.c	\
+		src/files_engine.c	\
+		src/files_error.c	\
+		src/make_info.c
 
 NAME	=	tetris
 

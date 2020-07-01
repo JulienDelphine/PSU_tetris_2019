@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2020
 ** Tetris
 ** File description:
-** my strstr for tetris
+** my_strstr for tetris
 */
 
 #include "include/lib.h"

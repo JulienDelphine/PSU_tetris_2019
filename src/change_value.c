@@ -7,6 +7,21 @@
 
 #include "tetris.h"
 
+int check_other_arg(char *arg, char check, game_t *game)
+{
+    if (my_strcmp("-q\0", arg) == 0) {
+        game->key.key_quit = check;
+        return (1);
+    }
+    if (my_strcmp("-p\0", arg) == 0) {
+        game->key.key_pause = check;
+        return (1);
+    }
+    if (my_strcmp("-w\0", arg) == 0)
+        game->next++;
+    return (0);
+}
+
 int check_all_arg(char *arg, char check, game_t *game)
 {
     if (my_strcmp("-l\0", arg) == 0) {
@@ -25,16 +40,8 @@ int check_all_arg(char *arg, char check, game_t *game)
         game->key.key_drop = check;
         return (1);
     }
-    if (my_strcmp("-q\0", arg) == 0) {
-        game->key.key_quit = check;
+    if (check_other_arg(arg, check, game) == 1)
         return (1);
-    }
-    if (my_strcmp("-p\0", arg) == 0) {
-        game->key.key_pause = check;
-        return (1);
-    }
-    if (my_strcmp("-w\0", arg) == 0)
-        game->next++;
     return (0);
 }
 
@@ -42,7 +49,7 @@ void change_value(int ac, char **av, game_t *game)
 {
     int i = 1;
 
-    for (; i != ac - 1; i++) {
+    for (; i < ac - 1; i++) {
         if (check_all_arg(av[i], av[i + 1][0], game) == 1)
             i++;
     }

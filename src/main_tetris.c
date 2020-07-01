@@ -37,7 +37,7 @@ int main_tetris(int ac, char **av)
 
     init_game(&game);
     for (int i = 0; i != ac; i++) {
-        if (my_strcmp("-D\0", av[i]) == 0 || 
+        if (my_strcmp("-D\0", av[i]) == 0 ||
         my_strcmp("--debug\0", av[i]) == 0) {
             start_debug(ac, av, &game);
             return (0);

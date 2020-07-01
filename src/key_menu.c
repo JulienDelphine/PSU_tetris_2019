@@ -15,7 +15,7 @@ char *key_pause(key_s *key)
         str = "(space)\0";
     else {
         str = malloc(sizeof(char) * 2);
-        str[0] = key->key_left;
+        str[0] = key->key_pause;
         str[1] = '\0';
     }
     return (str);

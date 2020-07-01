@@ -41,5 +41,6 @@ void print_debug(game_t *game)
     my_printf("Next :  %s\n", verif_next(game));
     my_printf("Level :  %d\n", game->level);
     my_printf("Size :  %d*%d\n", game->size_y, game->size_x);
-    my_printf("Tetriminos :  \n");
+    files_error();
+    my_printf("Press any key to start Tetris\n");
 }
